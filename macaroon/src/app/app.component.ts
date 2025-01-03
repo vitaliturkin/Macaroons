@@ -66,7 +66,7 @@ export class AppComponent {
 
   public addToCart(product: ProductType, target: HTMLElement): void {
     this.scrollTo(target);
-    this.formValues.productTitle = product.title;
+    this.formValues.productTitle = product.title.toUpperCase();
   }
 
   public createOrder(){
