@@ -1,0 +1,81 @@
+<main class="main">
+  <section class="main__info">
+    <div class="container main__info-container">
+      <h1 class="info__title">Мягкие французские
+        пироженки Macaroons</h1>
+      <p class="info__text">Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками
+        Macaroon!</p>
+      <button class="btn info__btn" (click)="scrollTo(productsElement)">Выбрать макарун</button>
+      <div class="main__info-img">
+        <img src="assets/img/MainPhoto.png" alt="Main Image" class="info__img">
+      </div>
+    </div>
+  </section>
+
+  <section class="main__about" id="about">
+    <div class="container main__about-container">
+      <h2 class="main__about__title">Мы печём для вас
+        вкуснейшие макаруны
+        уже более 10 лет</h2>
+      <p class="main__about__text">Все пироженки мы готовим только из натуральных и качественных продуктов,
+        без консервантов, ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%,
+        без дрожжей, маргарина, разрыхлителей и улучшителей муки.</p>
+      <div class="main__about__image">
+        <img src="assets/img/Macaroon.png" alt="Macaroon" class="main_about-img">
+      </div>
+    </div>
+  </section>
+
+  <section class="main__advantages">
+    <div class="container">
+      <div class="main__advantages-points">
+        <benefits *ngFor="let advantage of advantages; let i = index;" [advantage]="advantage" [i]="i"></benefits>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__products" id="products" #productsElement>
+    <div class="container products__container">
+      <div class="main__products-title">
+        <h2 class="products__title">Выберите свой макарун</h2>
+      </div>
+      <div class="products__items">
+        <product *ngFor="let product of products; let i = index;" [product]="product" [i]="i" (addToCartEvent)="addToCart($event,orderElement)"></product>
+      </div>
+    </div>
+  </section>
+
+  <section class="main__order" id="order" #orderElement>
+    <div class="container order__container">
+      <div class="main__order-img">
+        <img src="assets/img/macaroons.png" alt="Macaroons" class="order__img">
+      </div>
+      <div class="main__order-form">
+        <h2 class="main__form-title">Закажите макарун!</h2>
+        <p class="main__form-text">Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего
+          пекаря!</p>
+
+        <label for="product" class="form__label">Ваш выбор</label>
+        <input class="form__input" type="text" id="product" name="product"
+               placeholder="Напишите, что хотите заказать..." [(ngModel)]="formValues.productTitle" required>
+
+        <label class="form__label">Заполните данные для заказа</label>
+        <input class="form__input" type="text" name="fullName" placeholder="Ваше имя" [(ngModel)]="formValues.name" required>
+        <input class="form__input" type="text" name="password" placeholder="+375 (__) ___ - __ - __" [(ngModel)]="formValues.phone"  [value]="formValues.phone | phoneFormat"
+               required>
+
+        <button class="btn form__button" (click)="createOrder()">Оформить заказ</button>
+      </div>
+    </div>
+    <img src="assets/img/strawberryTop.png" alt="StrawberryTop" class="strawberry strawberry-left">
+    <img src="assets/img/strawberryBottom.png" alt="StrawberryBottom" class="strawberry strawberry-right">
+  </section>
+</main>
+
+<div *ngIf="showPresent" class="present" >
+  <a href="#">
+    <img class="present__img" src="assets/img/cart.png" alt="Present">
+  </a>
+  <div class="present__counter" *ngIf="cartService.totalAmount > 0" >{{cartService.totalAmount}}</div>
+  <span class="present__text">{{ cartService.totalPrice | currency:'руб.':'symbol':'1.2-2':'fr' }}</span>
+</div>

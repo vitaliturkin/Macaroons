@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Tavolga;
+  src: url("./assets/fonts/Tavolga.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: GilroyRegular;
+  src: url("./assets/fonts/Gilroy-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: GilroyMedium;
+  src: url("./assets/fonts/Gilroy-Medium.ttf") format("truetype"),
+  url("./assets/fonts/Gilroy-Medium.woff") format("woff"),
+  url("./assets/fonts/Gilroy-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url("./assets/fonts/Gilroy-Bold.ttf") format("truetype"),
+  url("./assets/fonts/Gilroy-Bold.woff") format("woff"),
+  url("./assets/fonts/Gilroy-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: GilroyExtraBold;
+  src: url("./assets/fonts/Gilroy-ExtraBold.ttf") format("truetype"),
+  url("./assets/fonts/Gilroy-Extrabold.woff") format("woff"),
+  url("./assets/fonts/Gilroy-Extrabold.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btn {
+  background-image: -moz-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  background: linear-gradient(0deg, rgb(113, 8, 30) 0%, rgb(215, 72, 92) 100%);
+  border-radius: 30px;
+  border: 0;
+
+  font-size: 18px;
+  font-family: GilroyBold, sans-serif;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
+}

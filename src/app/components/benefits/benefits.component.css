@@ -1,0 +1,53 @@
+.main__point-number {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 60px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 0.75;
+    margin-bottom: 13px;
+
+    border-radius: 50%;
+    background-color: rgb(130, 19, 40);
+    width: 70px;
+    height: 70px;
+
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.main__point:hover .main__point-number {
+    color: rgb(130, 19, 40);
+    background-color: #eba8b1;
+}
+
+.main__point-title {
+    font-size: 20px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: rgb(51, 25, 7);
+    margin-bottom: 23px;
+}
+
+.main__point-text {
+    max-width: 220px;
+    font-size: 15px;
+    font-family: GilroyMedium, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.333;
+}
+
+/* max screen size 375 */
+@media screen and (max-width: 376px) {
+    .main__point-title {
+        font-size: 18px;
+    }
+
+    .main__point-text {
+        height: 145px;
+        font-size: 13px;
+    }
+
+}
+
+

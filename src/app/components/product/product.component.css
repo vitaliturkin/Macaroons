@@ -1,0 +1,57 @@
+
+.product__item {
+    width: 263px;
+    box-sizing: border-box;
+    position: relative;
+    padding: 109px 21px 27px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.product__item-image {
+    position: absolute;
+    top: -70px;
+    left: 14%;
+    transition: transform 0.3s ease;
+    height: 124px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.product__item:hover .product__item-image {
+    transform: scale(1.1);
+}
+
+.product__item-title {
+    display: block;
+    font-size: 18px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.product__item-info {
+    display: grid;
+    grid-template-columns: 57px 130px;
+    grid-column-gap: 30px;
+}
+
+.product__item-quantity {
+    display: block;
+    font-size: 15px;
+    font-family: GilroyRegular, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 16px;
+}
+
+.product__item-price {
+    font-size: 15px;
+    font-family: GilroyRegular, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.product__btn {
+    width: 130px;
+    padding: 19px;
+}
