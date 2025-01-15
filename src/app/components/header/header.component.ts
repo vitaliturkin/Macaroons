@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'header-component',
@@ -7,9 +7,8 @@ import { Component} from '@angular/core';
 })
 export class HeaderComponent{
   isMenuOpen: boolean = false;
-  phone: string= 'https://www.whatsapp.com/';
 
-  constructor() {}
+  @Input() phone: string = '';
 
   openMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;

@@ -39,6 +39,6 @@
       </ul>
     </nav>
 
-    <a [href]="phone" class="header__contact-phone">+375 (29) 368-98-68</a>
+    <a href="tel:{{phone}}" class="header__contact-phone">{{phone | phoneFormat}}</a>
   </div>
 </header>

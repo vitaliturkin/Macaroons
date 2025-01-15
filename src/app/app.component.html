@@ -1,3 +1,4 @@
+<!-- <header-component [phone]="phone" ></header-component> -->
 <main class="main">
   <section class="main__info">
     <div class="container main__info-container">
@@ -5,7 +6,7 @@
         пироженки Macaroons</h1>
       <p class="info__text">Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками
         Macaroon!</p>
-      <button class="btn info__btn" (click)="scrollTo(productsElement)">Выбрать макарун</button>
+      <button class="btn info__btn" appBtnHoverEffect (click)="scrollTo(productsElement)">Выбрать макарун</button>
       <div class="main__info-img">
         <img src="assets/img/MainPhoto.png" alt="Main Image" class="info__img">
       </div>
@@ -64,7 +65,7 @@
         <input class="form__input" type="text" name="password" placeholder="+375 (__) ___ - __ - __" [(ngModel)]="formValues.phone"  [value]="formValues.phone | phoneFormat"
                required>
 
-        <button class="btn form__button" (click)="createOrder()">Оформить заказ</button>
+        <button class="btn form__button" appBtnHoverEffect (click)="createOrder()">Оформить заказ</button>
       </div>
     </div>
     <img src="assets/img/strawberryTop.png" alt="StrawberryTop" class="strawberry strawberry-left">
@@ -79,3 +80,5 @@
   <div class="present__counter" *ngIf="cartService.totalAmount > 0" >{{cartService.totalAmount}}</div>
   <span class="present__text">{{ cartService.totalPrice | currency:'руб.':'symbol':'1.2-2':'fr' }}</span>
 </div>
+
+<footer-component [phone]="phone" [link]="link"></footer-component>

@@ -8,11 +8,10 @@
       </div>
       <span class="footer__rights" id="rights">Все права защищены, 2020</span>
     </div>
-    <a [href]="link" class="footer__inst" id="footer__inst">
+    <a href="{{link}}" class="footer__inst" id="footer__inst">
       <img src="assets/img/instagram.png" alt="Instagram" class="footer__inst-instagram">
       <span class="footer__inst-text">Мы в Instagram</span>
     </a>
-    <a [href]="phone" class="footer__contact-phone" id="phone">+375 (29) 368-98-68
-    </a>
+    <a href="tel:{{phone}}" class="footer__contact-phone" id="phone">{{phone | phoneFormat}}</a>
   </div>
 </footer>

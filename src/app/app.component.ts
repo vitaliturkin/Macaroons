@@ -10,8 +10,10 @@ import {CartService} from "./services/cart.service";
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  phone: string = '375293689868';
+  link: string = 'https://www.instagram.com/';
 
-  public advantages: AdvantageType[] = [
+  advantages: AdvantageType[] = [
     {
       title: 'Лучшие продукты',
       description: 'Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты, ароматизаторы и красители.'
@@ -66,7 +68,9 @@ export class AppComponent implements OnInit {
       alert('Заполните строку телефона');
       return;
     }
+
     alert('Спасибо за заказ!');
+
     this.cartService.clearCart();
     this.formValues = {
       productTitle: '',

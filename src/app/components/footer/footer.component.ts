@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import {Component, Input } from '@angular/core';
 
 @Component({
   selector: 'footer-component',
@@ -7,8 +7,8 @@ import { Component} from '@angular/core';
 })
 export class FooterComponent {
 
-  link: string = 'https://www.instagram.com/';
-  phone: string= 'https://www.whatsapp.com/';
+  @Input() phone: string = '';
+  @Input() link: string = '';
 
   constructor() { }
 
