@@ -36,6 +36,6 @@ registerLocaleData(localeFr);
     { provide: LOCALE_ID, useValue: 'fr' },
       ProductService
   ],
-  bootstrap: [AppComponent, HeaderComponent, FooterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
